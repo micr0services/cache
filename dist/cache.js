@@ -1,5 +1,5 @@
 const store = new Map();
-const maxItems = parseInt(process.env.CACHE_MAX_ITEMS || '1000', 10);
+const maxItems = parseInt(process.env.CACHE_MAX_ITEMS || '0', 10);
 const defaultTtlSeconds = parseInt(process.env.CACHE_DEFAULT_TTL || '0', 10);
 function pruneIfNeeded() {
     if (store.size <= maxItems)

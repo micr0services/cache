@@ -1,0 +1,15 @@
+{
+  "keys": [
+    {
+      "id": "1e7efb90-0e6b-42f6-83a0-47312ff117b7",
+      "key": "235a870714ff455ab87944062843baff",
+      "name": "test-client",
+      "categories": [
+        "free"
+      ],
+      "ttlSeconds": 3600,
+      "rateLimit": 100,
+      "createdAt": "2025-10-22T11:11:31.372Z"
+    }
+  ]
+}

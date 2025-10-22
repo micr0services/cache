@@ -2,21 +2,32 @@ import { FastifyPluginCallback } from 'fastify';
 import { getByKey } from './keys.js';
 
 export const authPlugin: FastifyPluginCallback = (fastify, _opts, done) => {
+  fastify.log.info('auth plugin registered');
   fastify.addHook('onRequest', async (request, reply) => {
     const req: any = request;
     // health is open
     if (req.routerPath === '/health') return;
 
     // admin secret bypass
-    const adminSecret = req.headers['x-admin-secret'];
-    // debug: log header and expected value when in dev
-    if (process.env.NODE_ENV === 'development') {
-      fastify.log.debug({ adminHeader: adminSecret, envAdmin: process.env.ADMIN_SECRET }, 'auth: admin header check');
-    }
-    if (adminSecret && process.env.ADMIN_SECRET && String(adminSecret) === process.env.ADMIN_SECRET) {
-      // mark request
-      req.isAdmin = true;
-      return;
+    const rawAdminHeader = req.headers['x-admin-secret'];
+    const adminHeader = rawAdminHeader ? String(rawAdminHeader).trim() : '';
+    const envAdmin = process.env.ADMIN_SECRET ? String(process.env.ADMIN_SECRET).trim() : '';
+  // always log the header/env so we can diagnose admin auth problems
+  fastify.log.info({ adminHeader, envAdmin }, 'auth: admin header check');
+  // Also print to stdout to make sure the info is visible in all run modes
+  console.log('AUTH_CHECK', { adminHeader, envAdmin });
+
+    if (adminHeader) {
+      if (!envAdmin) {
+        fastify.log.warn('admin header provided but server ADMIN_SECRET is not configured');
+        reply.code(500).send({ error: 'server misconfigured: ADMIN_SECRET not set' });
+        return;
+      }
+      if (adminHeader === envAdmin) {
+        req.isAdmin = true;
+        return;
+      }
+      // header present but didn't match — fall through to return invalid API-key
     }
 
     const ak = String(req.headers['x-api-key'] || (req.query && req.query['apiKey']) || '');
