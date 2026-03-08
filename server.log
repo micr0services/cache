@@ -1,29 +1,11 @@
-{"level":30,"time":1761130908368,"pid":23907,"hostname":"will","msg":"auth plugin registered"}
-{"level":30,"time":1761130908380,"pid":23907,"hostname":"will","msg":"Server listening at http://127.0.0.1:8443"}
-{"level":30,"time":1761130908380,"pid":23907,"hostname":"will","msg":"Server listening at http://192.168.93.202:8443"}
-{"level":30,"time":1761130908380,"pid":23907,"hostname":"will","msg":"wilcache listening on 8443"}
-{"level":30,"time":1761130925177,"pid":23907,"hostname":"will","reqId":"req-1","req":{"method":"GET","url":"/admin/keys","host":"127.0.0.1:8443","remoteAddress":"127.0.0.1","remotePort":53848},"msg":"incoming request"}
-{"level":20,"time":1761130925178,"pid":23907,"hostname":"will","headers":{"host":"127.0.0.1:8443","user-agent":"curl/8.5.0","accept":"*/*","x-admin-secret":"wilfredkimani"},"msg":"admin: incoming list"}
-{"level":30,"time":1761130925178,"pid":23907,"hostname":"will","msg":"admin header matched fallback check"}
-{"level":30,"time":1761130925200,"pid":23907,"hostname":"will","reqId":"req-1","res":{"statusCode":200},"responseTime":22.13055199943483,"msg":"request completed"}
-{"level":30,"time":1761131027926,"pid":23907,"hostname":"will","reqId":"req-2","req":{"method":"GET","url":"/admin/keys","host":"127.0.0.1:8443","remoteAddress":"127.0.0.1","remotePort":58082},"msg":"incoming request"}
-{"level":20,"time":1761131027926,"pid":23907,"hostname":"will","headers":{"x-admin-secret":"wilfredkimani","user-agent":"PostmanRuntime/7.49.0","accept":"*/*","postman-token":"dcac84cc-3e42-4019-b459-5bd0a12f41ae","host":"127.0.0.1:8443","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"msg":"admin: incoming list"}
-{"level":30,"time":1761131027926,"pid":23907,"hostname":"will","msg":"admin header matched fallback check"}
-{"level":30,"time":1761131027927,"pid":23907,"hostname":"will","reqId":"req-2","res":{"statusCode":200},"responseTime":1.005299000069499,"msg":"request completed"}
-{"level":30,"time":1761131073784,"pid":23907,"hostname":"will","reqId":"req-3","req":{"method":"GET","url":"/admin/keys","host":"127.0.0.1:8443","remoteAddress":"127.0.0.1","remotePort":58082},"msg":"incoming request"}
-{"level":20,"time":1761131073784,"pid":23907,"hostname":"will","headers":{"x-admin-secret":"wilfredkimanimmm","user-agent":"PostmanRuntime/7.49.0","accept":"*/*","postman-token":"8238291e-49eb-48e4-9eca-8651c9255997","host":"127.0.0.1:8443","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"msg":"admin: incoming list"}
-{"level":30,"time":1761131073785,"pid":23907,"hostname":"will","reqId":"req-3","res":{"statusCode":403},"responseTime":1.3266859985888004,"msg":"request completed"}
-{"level":30,"time":1761131082269,"pid":23907,"hostname":"will","reqId":"req-4","req":{"method":"GET","url":"/admin/keys","host":"127.0.0.1:8443","remoteAddress":"127.0.0.1","remotePort":58082},"msg":"incoming request"}
-{"level":20,"time":1761131082269,"pid":23907,"hostname":"will","headers":{"x-admin-secret":"wilfredkimani","user-agent":"PostmanRuntime/7.49.0","accept":"*/*","postman-token":"52a0c512-b82b-459d-9b4a-78b3c5388f28","host":"127.0.0.1:8443","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"msg":"admin: incoming list"}
-{"level":30,"time":1761131082270,"pid":23907,"hostname":"will","msg":"admin header matched fallback check"}
-{"level":30,"time":1761131082270,"pid":23907,"hostname":"will","reqId":"req-4","res":{"statusCode":200},"responseTime":0.9011589996516705,"msg":"request completed"}
-{"level":30,"time":1761131491369,"pid":23907,"hostname":"will","reqId":"req-5","req":{"method":"POST","url":"/admin/keys","host":"127.0.0.1:8443","remoteAddress":"127.0.0.1","remotePort":44408},"msg":"incoming request"}
-{"level":20,"time":1761131491372,"pid":23907,"hostname":"will","headers":{"x-admin-secret":"wilfredkimani","content-type":"application/json","user-agent":"PostmanRuntime/7.49.0","accept":"*/*","postman-token":"a9df9f78-77b8-4546-8e60-c7e279833153","host":"127.0.0.1:8443","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"95"},"msg":"admin: incoming"}
-{"level":30,"time":1761131491372,"pid":23907,"hostname":"will","msg":"admin header matched fallback check"}
-{"level":30,"time":1761131491373,"pid":23907,"hostname":"will","reqId":"req-5","res":{"statusCode":201},"responseTime":4.323871999979019,"msg":"request completed"}
-{"level":30,"time":1761131514410,"pid":23907,"hostname":"will","reqId":"req-6","req":{"method":"GET","url":"/admin/keys","host":"127.0.0.1:8443","remoteAddress":"127.0.0.1","remotePort":44408},"msg":"incoming request"}
-{"level":20,"time":1761131514410,"pid":23907,"hostname":"will","headers":{"x-admin-secret":"wilfredkimani","user-agent":"PostmanRuntime/7.49.0","accept":"*/*","postman-token":"cf51ec5a-b019-49a2-b6a5-f40132ac8686","host":"127.0.0.1:8443","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"msg":"admin: incoming list"}
-{"level":30,"time":1761131514410,"pid":23907,"hostname":"will","msg":"admin header matched fallback check"}
-{"level":30,"time":1761131514411,"pid":23907,"hostname":"will","reqId":"req-6","res":{"statusCode":200},"responseTime":0.787024000659585,"msg":"request completed"}
-{"level":30,"time":1761131592077,"pid":23907,"hostname":"will","reqId":"req-7","req":{"method":"GET","url":"/health","host":"127.0.0.1:8443","remoteAddress":"127.0.0.1","remotePort":43448},"msg":"incoming request"}
-{"level":30,"time":1761131592078,"pid":23907,"hostname":"will","reqId":"req-7","res":{"statusCode":200},"responseTime":0.7281720004975796,"msg":"request completed"}
+file:///home/wilfred/wilcache/dist/cache.js:6
+const cache = new CacheCtor({
+              ^
+
+TypeError: CacheCtor is not a constructor
+    at file:///home/wilfred/wilcache/dist/cache.js:6:15
+    at ModuleJob.run (node:internal/modules/esm/module_job:263:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:540:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v20.19.4
